@@ -17,7 +17,7 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class ModelMightyMorphinRed_model<T extends LivingEntity> extends HumanoidModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "redmightymorphin"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "red_mighty_morphin"), "main");
 
 	public ModelMightyMorphinRed_model(ModelPart modelPart) {
 		super(modelPart);
@@ -446,10 +446,10 @@ public class ModelMightyMorphinRed_model<T extends LivingEntity> extends Humanoi
 
 	@Override
 	public void renderToBuffer(PoseStack matrixStack, VertexConsumer vertexConsumer, int p_225598_3_, int p_225598_4_, float p_225598_5_, float p_225598_6_, float p_225598_7_, float p_225598_8_) {
-		this.leftLeg.visible = true;
-		this.rightLeg.visible = true;
-		this.head.visible = true;
-		this.body.visible = true;
+		this.leftLeg.visible = false;
+		this.rightLeg.visible = false;
+		this.head.visible = false;
+		this.body.visible = false;
 		super.renderToBuffer(matrixStack, vertexConsumer, p_225598_3_, p_225598_4_, p_225598_5_, p_225598_6_, p_225598_7_, p_225598_8_);
 	}
 }

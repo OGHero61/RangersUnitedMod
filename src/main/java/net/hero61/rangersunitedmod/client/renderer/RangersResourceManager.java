@@ -18,7 +18,7 @@ public class RangersResourceManager extends BlockEntityWithoutLevelRenderer {
 
             ((RangersArmorItem) ModItems.RED_MIGHTY_MORPHIN.get())
                     .setArmorModel(new ModelMightyMorphinRed_model<>(modelSet.bakeLayer(ModelMightyMorphinRed_model.LAYER_LOCATION)))
-                    .setArmorTexture("textures/models/armor/akatsuki_cloak.png");
+                    .setArmorTexture("textures/models/armor/mightymorphinred.png");
 
 
         }

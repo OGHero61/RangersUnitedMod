@@ -4,7 +4,6 @@ import net.hero61.rangersunitedmod.RangersUnitedMod;
 import net.hero61.rangersunitedmod.item.armor.RangersArmorItem;
 import net.hero61.rangersunitedmod.item.armor.RangersArmorMaterial;
 import net.minecraft.world.entity.EquipmentSlot;
-import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraftforge.eventbus.api.IEventBus;
