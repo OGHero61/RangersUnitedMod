@@ -1,7 +1,7 @@
 package net.hero61.rangersunitedmod;
 
 import com.mojang.logging.LogUtils;
-import net.hero61.rangersunitedmod.item.ModItems;
+import net.hero61.rangersunitedmod.item.RangersItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
@@ -25,33 +25,24 @@ import org.slf4j.Logger;
 
 
 @Mod(RangersUnitedMod.MOD_ID)
+@Mod.EventBusSubscriber(modid = RangersUnitedMod.MOD_ID)
 public class RangersUnitedMod {
-    public static final String MOD_ID = "rangersunited";
 
-   // private static final Logger LOGGER = LogUtils.getLogger();
+    public static final String MOD_ID = "rangersunited";
+    private static final Logger LOGGER = LogUtils.getLogger();
 
     public RangersUnitedMod() {
-        IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        eventBus.addListener(this::clientSetup);
-        eventBus.addListener(this:: setup);
+        modEventBus.addListener(this::commonSetup);
 
-        ModItems.register(eventBus);
-
-        MinecraftForge.EVENT_BUS.register(this);
+        RangersItems.register(modEventBus);
     }
 
-    private void clientSetup(final FMLCommonSetupEvent event) {
+    private void commonSetup(final FMLCommonSetupEvent event) {
     }
-    private void setup(FMLCommonSetupEvent event) {
-    }
+    @SubscribeEvent
+    public static void onClientSetup(FMLClientSetupEvent event) {
 
-
-    @Mod.EventBusSubscriber(modid = MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-    public static class ClientModEvents {
-        @SubscribeEvent
-        public static void onClientSetup(FMLClientSetupEvent event) {
-
-        }
     }
 }

@@ -11,7 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModItems {
+public class RangersItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, RangersUnitedMod.MOD_ID);
 
 //Mighty Morphin
@@ -27,6 +27,8 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(RangersUnitedTabs.MIGHTY_MORPHIN_TAB).stacksTo(1).fireResistant().rarity(Rarity.EPIC)));
     public static final RegistryObject<Item> YELLOW_MIGHTY_MORPHIN_MORPHER =ITEMS.register("yellow_mighty_morphin_morpher",
             () -> new Item(new Item.Properties().tab(RangersUnitedTabs.MIGHTY_MORPHIN_TAB).stacksTo(1).fireResistant().rarity(Rarity.EPIC)));
+
+
     public static final RegistryObject<Item> RED_MIGHTY_MORPHIN = ITEMS.register("red_mighty_morphin",
             () -> new RangersArmorItem(RangersArmorMaterial.MIGHTY_MORPHIN, EquipmentSlot.HEAD, new Item.Properties().tab(RangersUnitedTabs.MIGHTY_MORPHIN_TAB)));
    /*public static final RegistryObject<Item> RED_MIGHTY_MORPHIN_CHESTPLATE = ITEMS.register("red_mighty_morphin_chestplate",

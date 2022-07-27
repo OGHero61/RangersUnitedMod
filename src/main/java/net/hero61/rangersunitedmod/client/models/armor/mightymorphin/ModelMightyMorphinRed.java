@@ -7,6 +7,7 @@ package net.hero61.rangersunitedmod.client.models.armor.mightymorphin;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.sekwah.sekclib.util.ModelUtils;
+import net.hero61.rangersunitedmod.RangersUnitedMod;
 import net.minecraft.client.model.HumanoidModel;
 import net.minecraft.client.model.geom.ModelLayerLocation;
 import net.minecraft.client.model.geom.ModelPart;
@@ -15,11 +16,12 @@ import net.minecraft.client.model.geom.builders.*;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.LivingEntity;
 
-public class ModelMightyMorphinRed_model<T extends LivingEntity> extends HumanoidModel<T> {
+public class ModelMightyMorphinRed<T extends LivingEntity> extends HumanoidModel<T> {
 	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
-	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation("modid", "red_mighty_morphin"), "main");
+	public static final ModelLayerLocation LAYER_LOCATION =
+			new ModelLayerLocation(new ResourceLocation(RangersUnitedMod.MOD_ID, "redmightymorphin"), "main");
 
-	public ModelMightyMorphinRed_model(ModelPart modelPart) {
+	public ModelMightyMorphinRed(ModelPart modelPart) {
 		super(modelPart);
 
 	}
@@ -175,43 +177,116 @@ public class ModelMightyMorphinRed_model<T extends LivingEntity> extends Humanoi
 						 .addBox(-1.0F, -7.65F, -4.55F, 2.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)),
 				 PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		 Head.addOrReplaceChild("Mouth2", CubeListBuilder.create().texOffs(90, 90).addBox(-1.5F, -2.5F, -4.12F, 3.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		 Head.addOrReplaceChild("Mouth2",
+				 CubeListBuilder.create()
+						 .texOffs(90, 90)
+						 .addBox(-1.5F, -2.5F, -4.12F, 3.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				 PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		Head.addOrReplaceChild("Goggles25", CubeListBuilder.create().texOffs(125, 70).addBox(-5.89F, -0.83F, -4.25F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, 0.6981F));
+		Head.addOrReplaceChild("Goggles25",
+				CubeListBuilder.create()
+						.texOffs(125, 70)
+						.addBox(-5.89F, -0.83F, -4.25F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, 0.6981F));
 
-		  Head.addOrReplaceChild("MouthFix4", CubeListBuilder.create().texOffs(87, 90).addBox(-0.35F, -2.17F, -4.05F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.5585F));
+		  Head.addOrReplaceChild("MouthFix4",
+				  CubeListBuilder.create()
+						  .texOffs(87, 90)
+						  .addBox(-0.35F, -2.17F, -4.05F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.5585F));
 
-		  Head.addOrReplaceChild("MouthFix7", CubeListBuilder.create().texOffs(87, 90).addBox(-0.35F, -1.87F, -4.05F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.5585F));
+		  Head.addOrReplaceChild("MouthFix7",
+				  CubeListBuilder.create()
+						  .texOffs(87, 90)
+						  .addBox(-0.35F, -1.87F, -4.05F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.0F, 0.5585F));
 
-		  Head.addOrReplaceChild("Goggles26", CubeListBuilder.create().texOffs(125, 70).mirror().addBox(4.89F, -0.83F, -4.25F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, -0.6981F));
+		  Head.addOrReplaceChild("Goggles26",
+				  CubeListBuilder.create()
+						  .texOffs(125, 70).mirror()
+						  .addBox(4.89F, -0.83F, -4.25F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, -0.6981F));
 
-		  Head.addOrReplaceChild("Goggles29", CubeListBuilder.create().texOffs(120, 60).addBox(-5.22F, -5.13F, -2.88F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, -0.2618F, 0.0873F));
+		  Head.addOrReplaceChild("Goggles29",
+				  CubeListBuilder.create()
+						  .texOffs(120, 60)
+						  .addBox(-5.22F, -5.13F, -2.88F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, -0.2618F, 0.0873F));
 
-		   Head.addOrReplaceChild("Goggles20", CubeListBuilder.create().texOffs(90, 50).addBox(-1.94F, -7.33F, -2.34F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, -0.2618F));
+		   Head.addOrReplaceChild("Goggles20",
+				   CubeListBuilder.create()
+						   .texOffs(90, 50)
+						   .addBox(-1.94F, -7.33F, -2.34F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				   PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, -0.2618F));
 
-		  Head.addOrReplaceChild("HeadBit6", CubeListBuilder.create().texOffs(18, 80).addBox(3.18F, -6.0F, -3.89F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		  Head.addOrReplaceChild("HeadBit6",
+				  CubeListBuilder.create()
+						  .texOffs(18, 80)
+						  .addBox(3.18F, -6.0F, -3.89F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		 Head.addOrReplaceChild("Mouth6", CubeListBuilder.create().texOffs(90, 90).addBox(-1.0F, -4.35F, -1.65F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.8727F, 0.0F, 0.0F));
+		 Head.addOrReplaceChild("Mouth6",
+				 CubeListBuilder.create()
+						 .texOffs(90, 90)
+						 .addBox(-1.0F, -4.35F, -1.65F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				 PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.8727F, 0.0F, 0.0F));
 
-		 Head.addOrReplaceChild("Goggles24", CubeListBuilder.create().texOffs(100, 50).addBox(-2.27F, -7.33F, -2.34F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, -0.2618F));
+		 Head.addOrReplaceChild("Goggles24",
+				 CubeListBuilder.create().texOffs(100, 50).addBox(-2.27F, -7.33F, -2.34F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, -0.2618F));
 
-		  Head.addOrReplaceChild("Goggles22", CubeListBuilder.create().texOffs(110, 60).addBox(4.21F, -5.33F, -2.87F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.2618F, -0.0873F));
+		  Head.addOrReplaceChild("Goggles22",
+				  CubeListBuilder.create()
+						  .texOffs(110, 60)
+						  .addBox(4.21F, -5.33F, -2.87F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.2618F, -0.0873F));
 
-		 Head.addOrReplaceChild("HeadBit1", CubeListBuilder.create().texOffs(18, 90).addBox(-1.5F, -8.2F, -4.3F, 3.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		 Head.addOrReplaceChild("HeadBit1",
+				 CubeListBuilder.create()
+						 .texOffs(18, 90)
+						 .addBox(-1.5F, -8.2F, -4.3F, 3.0F, 2.0F, 2.0F, new CubeDeformation(0.0F)),
+				 PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		  Head.addOrReplaceChild("Goggles2", CubeListBuilder.create().texOffs(0, 70).addBox(-3.08F, -2.2F, -4.54F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, 0.4363F));
+		  Head.addOrReplaceChild("Goggles2",
+				  CubeListBuilder.create()
+						  .texOffs(0, 70)
+						  .addBox(-3.08F, -2.2F, -4.54F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, 0.4363F));
 
-		  Head.addOrReplaceChild("Goggles27", CubeListBuilder.create().texOffs(100, 50).mirror().addBox(1.27F, -7.33F, -2.34F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, 0.2618F));
+		  Head.addOrReplaceChild("Goggles27",
+				  CubeListBuilder.create()
+						  .texOffs(100, 50).mirror()
+						  .addBox(1.27F, -7.33F, -2.34F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, 0.2618F));
 
-		 Head.addOrReplaceChild("Mouth7", CubeListBuilder.create().texOffs(90, 90).addBox(-1.0F, -1.64F, -4.12F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		 Head.addOrReplaceChild("Mouth7",
+				 CubeListBuilder.create()
+						 .texOffs(90, 90)
+						 .addBox(-1.0F, -1.64F, -4.12F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				 PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		  Head.addOrReplaceChild("Eye2", CubeListBuilder.create().texOffs(130, 50).addBox(3.5F, -7.8F, -2.18F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, -0.1745F));
+		  Head.addOrReplaceChild("Eye2",
+				  CubeListBuilder.create()
+						  .texOffs(130, 50)
+						  .addBox(3.5F, -7.8F, -2.18F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, -0.1745F));
 
-		  Head.addOrReplaceChild("Goggles8", CubeListBuilder.create().texOffs(100, 70).mirror().addBox(3.0F, -1.9F, -4.54F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, -0.4363F));
+		  Head.addOrReplaceChild("Goggles8",
+				  CubeListBuilder.create()
+						  .texOffs(100, 70).mirror()
+						  .addBox(3.0F, -1.9F, -4.54F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)).mirror(false),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, -0.2618F, 0.0F, -0.4363F));
 
-		  Head.addOrReplaceChild("HeadBit4", CubeListBuilder.create().texOffs(18, 80).addBox(-4.18F, -6.0F, -3.89F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		  Head.addOrReplaceChild("HeadBit4",
+				  CubeListBuilder.create()
+						  .texOffs(18, 80)
+						  .addBox(-4.18F, -6.0F, -3.89F, 1.0F, 2.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offset(0.0F, 0.0F, 0.0F));
 
-		  Head.addOrReplaceChild("Goggles16", CubeListBuilder.create().texOffs(0, 70).addBox(0.85F, -6.0F, -2.6F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, -0.1745F));
+		  Head.addOrReplaceChild("Goggles16",
+				  CubeListBuilder.create()
+						  .texOffs(0, 70)
+						  .addBox(0.85F, -6.0F, -2.6F, 2.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.2618F, 0.0F, -0.1745F));
 
 		PartDefinition Body = root.addOrReplaceChild("Body",
 				CubeListBuilder.create()
@@ -219,15 +294,35 @@ public class ModelMightyMorphinRed_model<T extends LivingEntity> extends Humanoi
 						.addBox(-4.0F, 0.0F, -2.0F, 8.0F, 12.0F, 4.0F, new CubeDeformation(0.0F)),
 				PartPose.ZERO);
 
-		  Body.addOrReplaceChild("WhiteD5", CubeListBuilder.create().texOffs(0, 80).addBox(4.42F, 6.1F, -0.75F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.2618F, 0.6109F));
+		  Body.addOrReplaceChild("WhiteD5",
+				  CubeListBuilder.create()
+						  .texOffs(0, 80)
+						  .addBox(4.42F, 6.1F, -0.75F, 1.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				  PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.2618F, 0.6109F));
 
-		Body.addOrReplaceChild("WhiteD4", CubeListBuilder.create().texOffs(0, 80).addBox(-5.42F, 1.5F, -0.75F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, -0.2618F, -0.6109F));
+		Body.addOrReplaceChild("WhiteD4",
+				CubeListBuilder.create()
+						.texOffs(0, 80)
+						.addBox(-5.42F, 1.5F, -0.75F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)),
+				PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, -0.2618F, -0.6109F));
 
-		 Body.addOrReplaceChild("WhiteD8", CubeListBuilder.create().texOffs(0, 80).addBox(2.2F, 4.65F, -1.32F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.2618F, -0.1745F));
+		 Body.addOrReplaceChild("WhiteD8",
+				 CubeListBuilder.create()
+						 .texOffs(0, 80)
+						 .addBox(2.2F, 4.65F, -1.32F, 1.0F, 3.0F, 1.0F, new CubeDeformation(0.0F)),
+				 PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.2618F, -0.1745F));
 
-		 Body.addOrReplaceChild("WhiteD2", CubeListBuilder.create().texOffs(0, 80).addBox(-0.2F, 0.2F, -2.0F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.2618F, -0.6109F));
+		 Body.addOrReplaceChild("WhiteD2",
+				 CubeListBuilder.create()
+						 .texOffs(0, 80)
+						 .addBox(-0.2F, 0.2F, -2.0F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)),
+				 PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, 0.2618F, -0.6109F));
 
-		 Body.addOrReplaceChild("Belt4", CubeListBuilder.create().texOffs(0, 50).addBox(-4.0F, 10.5F, 1.3F, 8.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offset(0.0F, 0.0F, 0.0F));
+		 Body.addOrReplaceChild("Belt4",
+				 CubeListBuilder.create()
+						 .texOffs(0, 50)
+						 .addBox(-4.0F, 10.5F, 1.3F, 8.0F, 1.0F, 1.0F, new CubeDeformation(0.0F)),
+				 PartPose.offset(0.0F, 0.0F, 0.0F));
 
 		 Body.addOrReplaceChild("WhiteD12", CubeListBuilder.create().texOffs(0, 80).addBox(-3.6F, 2.38F, 1.86F, 1.0F, 5.0F, 1.0F, new CubeDeformation(0.0F)), PartPose.offsetAndRotation(0.0F, 0.0F, 0.0F, 0.0F, -0.2618F, -0.9599F));
 
